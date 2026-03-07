@@ -1,0 +1,661 @@
+{
+  "version": 4,
+  "terraform_version": "1.14.3",
+  "serial": 55,
+  "lineage": "b8a79e6c-01ac-cece-7b4a-58dcd5235283",
+  "outputs": {},
+  "resources": [
+    {
+      "module": "module.rancher_configuration",
+      "mode": "managed",
+      "type": "rancher2_cluster",
+      "name": "downstream_cluster",
+      "provider": "provider[\"registry.terraform.io/rancher/rancher2\"]",
+      "instances": [
+        {
+          "index_key": "payload",
+          "status": "tainted",
+          "schema_version": 2,
+          "attributes": {
+            "agent_env_vars": [],
+            "aks_config_v2": [],
+            "annotations": null,
+            "ca_cert": null,
+            "cluster_agent_deployment_customization": [],
+            "cluster_auth_endpoint": null,
+            "cluster_registration_token": null,
+            "cluster_template_answers": null,
+            "cluster_template_id": null,
+            "cluster_template_questions": null,
+            "cluster_template_revision_id": null,
+            "default_pod_security_admission_configuration_template_name": null,
+            "default_project_id": null,
+            "description": null,
+            "desired_agent_image": null,
+            "desired_auth_image": null,
+            "docker_root_dir": null,
+            "driver": null,
+            "eks_config_v2": null,
+            "enable_cluster_istio": null,
+            "enable_network_policy": null,
+            "fleet_agent_deployment_customization": [],
+            "fleet_workspace_name": null,
+            "gke_config_v2": [],
+            "id": "c-9gztc",
+            "imported_config": [],
+            "istio_enabled": null,
+            "k3s_config": null,
+            "kube_config": null,
+            "labels": null,
+            "name": "payload",
+            "oke_config": [],
+            "rke2_config": null,
+            "rke_config": null,
+            "system_project_id": null,
+            "timeouts": null,
+            "windows_prefered_cluster": false
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "ca_cert"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "kube_config"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTgwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMiJ9"
+        }
+      ]
+    },
+    {
+      "module": "module.rancher_configuration",
+      "mode": "managed",
+      "type": "rancher2_feature",
+      "name": "feature_flags",
+      "provider": "provider[\"registry.terraform.io/rancher/rancher2\"]",
+      "instances": [
+        {
+          "index_key": "continuous-delivery",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "continuous-delivery",
+            "labels": {},
+            "name": "continuous-delivery",
+            "value": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "fleet",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "fleet",
+            "labels": {},
+            "name": "fleet",
+            "value": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "multi-cluster-management",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "multi-cluster-management",
+            "labels": {},
+            "name": "multi-cluster-management",
+            "value": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "rke2",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "rke2",
+            "labels": {},
+            "name": "rke2",
+            "value": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "uiextension",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "uiextension",
+            "labels": {},
+            "name": "uiextension",
+            "value": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "module": "module.rancher_configuration",
+      "mode": "managed",
+      "type": "rancher2_global_role_binding",
+      "name": "ldap_binding",
+      "provider": "provider[\"registry.terraform.io/rancher/rancher2\"]",
+      "instances": [
+        {
+          "index_key": "devops",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {
+              "cleanup.cattle.io/grbUpgradeCluster": "true"
+            },
+            "global_role_id": "admin",
+            "group_principal_id": "openldap_group://cn=devops,ou=groups,dc=devsecops,dc=lan",
+            "id": "devops-ldap-binding",
+            "labels": {
+              "cattle.io/creator": "norman"
+            },
+            "name": "devops-ldap-binding",
+            "timeouts": null,
+            "user_id": ""
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjMwMDAwMDAwMDAwMH19"
+        },
+        {
+          "index_key": "middleware",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {
+              "cleanup.cattle.io/grbUpgradeCluster": "true"
+            },
+            "global_role_id": "admin",
+            "group_principal_id": "openldap_group://cn=middleware,ou=groups,dc=devsecops,dc=lan",
+            "id": "middleware-ldap-binding",
+            "labels": {
+              "cattle.io/creator": "norman"
+            },
+            "name": "middleware-ldap-binding",
+            "timeouts": null,
+            "user_id": ""
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjMwMDAwMDAwMDAwMH19"
+        },
+        {
+          "index_key": "usilo",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {
+              "cleanup.cattle.io/grbUpgradeCluster": "true",
+              "lifecycle.cattle.io/create.mgmt-auth-grb-controller": "true"
+            },
+            "global_role_id": "user",
+            "group_principal_id": "openldap_group://cn=usilo,ou=groups,dc=devsecops,dc=lan",
+            "id": "usilo-ldap-binding",
+            "labels": {
+              "cattle.io/creator": "norman"
+            },
+            "name": "usilo-ldap-binding",
+            "timeouts": null,
+            "user_id": ""
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjMwMDAwMDAwMDAwMH19"
+        }
+      ]
+    },
+    {
+      "module": "module.rancher_configuration",
+      "mode": "managed",
+      "type": "rancher2_role_template",
+      "name": "cluster_reader",
+      "provider": "provider[\"registry.terraform.io/rancher/rancher2\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "administrative": false,
+            "annotations": {
+              "cleanup.cattle.io/rtUpgradeCluster": "true"
+            },
+            "builtin": false,
+            "context": "cluster",
+            "default_role": false,
+            "description": "Provides a comprehensive read-only view of cluster resources.",
+            "external": false,
+            "external_rules": [],
+            "hidden": false,
+            "id": "rt-mnmnb",
+            "labels": {
+              "cattle.io/creator": "norman"
+            },
+            "locked": false,
+            "name": "cluster-reader",
+            "role_template_ids": [
+              "projects-view",
+              "clustercatalogs-view"
+            ],
+            "rules": [
+              {
+                "api_groups": [
+                  ""
+                ],
+                "non_resource_urls": null,
+                "resource_names": null,
+                "resources": [
+                  "pods",
+                  "namespaces",
+                  "secrets",
+                  "configmaps",
+                  "services",
+                  "endpoints",
+                  "persistentvolumeclaims",
+                  "serviceaccounts"
+                ],
+                "verbs": [
+                  "list",
+                  "watch"
+                ]
+              },
+              {
+                "api_groups": [
+                  ""
+                ],
+                "non_resource_urls": null,
+                "resource_names": null,
+                "resources": [
+                  "pods",
+                  "namespaces",
+                  "configmaps",
+                  "services",
+                  "endpoints",
+                  "persistentvolumeclaims",
+                  "serviceaccounts"
+                ],
+                "verbs": [
+                  "get"
+                ]
+              },
+              {
+                "api_groups": [
+                  "apps"
+                ],
+                "non_resource_urls": null,
+                "resource_names": null,
+                "resources": [
+                  "deployments",
+                  "daemonsets",
+                  "replicasets",
+                  "statefulsets"
+                ],
+                "verbs": [
+                  "get",
+                  "list",
+                  "watch"
+                ]
+              },
+              {
+                "api_groups": [
+                  "batch"
+                ],
+                "non_resource_urls": null,
+                "resource_names": null,
+                "resources": [
+                  "cronjobs",
+                  "jobs"
+                ],
+                "verbs": [
+                  "get",
+                  "list",
+                  "watch"
+                ]
+              },
+              {
+                "api_groups": [
+                  "networking.k8s.io"
+                ],
+                "non_resource_urls": null,
+                "resource_names": null,
+                "resources": [
+                  "ingresses",
+                  "networkpolicies"
+                ],
+                "verbs": [
+                  "get",
+                  "list",
+                  "watch"
+                ]
+              },
+              {
+                "api_groups": [
+                  ""
+                ],
+                "non_resource_urls": null,
+                "resource_names": null,
+                "resources": [
+                  "pods/log"
+                ],
+                "verbs": [
+                  "get",
+                  "list",
+                  "watch"
+                ]
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19"
+        }
+      ]
+    },
+    {
+      "module": "module.rancher_configuration",
+      "mode": "managed",
+      "type": "rancher2_role_template",
+      "name": "user_permissions_project",
+      "provider": "provider[\"registry.terraform.io/rancher/rancher2\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "administrative": false,
+            "annotations": {
+              "cleanup.cattle.io/rtUpgradeCluster": "true"
+            },
+            "builtin": false,
+            "context": "project",
+            "default_role": false,
+            "description": "Allows a user to manage applications within a project.",
+            "external": false,
+            "external_rules": [],
+            "hidden": false,
+            "id": "rt-5vgph",
+            "labels": {
+              "cattle.io/creator": "norman"
+            },
+            "locked": false,
+            "name": "user",
+            "role_template_ids": [],
+            "rules": [
+              {
+                "api_groups": [
+                  ""
+                ],
+                "non_resource_urls": null,
+                "resource_names": null,
+                "resources": [
+                  "pods",
+                  "configmaps",
+                  "secrets",
+                  "services",
+                  "persistentvolumeclaims",
+                  "pods/log"
+                ],
+                "verbs": [
+                  "create",
+                  "delete",
+                  "get",
+                  "list",
+                  "patch",
+                  "update",
+                  "watch"
+                ]
+              },
+              {
+                "api_groups": [
+                  "apps"
+                ],
+                "non_resource_urls": null,
+                "resource_names": null,
+                "resources": [
+                  "deployments",
+                  "daemonsets",
+                  "replicasets",
+                  "statefulsets"
+                ],
+                "verbs": [
+                  "create",
+                  "delete",
+                  "get",
+                  "list",
+                  "patch",
+                  "update",
+                  "watch"
+                ]
+              },
+              {
+                "api_groups": [
+                  "batch"
+                ],
+                "non_resource_urls": null,
+                "resource_names": null,
+                "resources": [
+                  "cronjobs",
+                  "jobs"
+                ],
+                "verbs": [
+                  "create",
+                  "delete",
+                  "get",
+                  "list",
+                  "patch",
+                  "update",
+                  "watch"
+                ]
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19"
+        }
+      ]
+    },
+    {
+      "module": "module.rancher_configuration",
+      "mode": "managed",
+      "type": "rancher2_setting",
+      "name": "global_settings",
+      "provider": "provider[\"registry.terraform.io/rancher/rancher2\"]",
+      "instances": [
+        {
+          "index_key": "agent-tls-mode",
+          "status": "tainted",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": null,
+            "id": "agent-tls-mode",
+            "labels": null,
+            "name": "agent-tls-mode",
+            "value": "strict"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "auth-token-max-ttl-minutes",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "auth-token-max-ttl-minutes",
+            "labels": {},
+            "name": "auth-token-max-ttl-minutes",
+            "value": "129600"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "auth-user-info-max-age-seconds",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "auth-user-info-max-age-seconds",
+            "labels": {},
+            "name": "auth-user-info-max-age-seconds",
+            "value": "3600"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "auth-user-info-resync-cron",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "auth-user-info-resync-cron",
+            "labels": {},
+            "name": "auth-user-info-resync-cron",
+            "value": "0 0 * * *"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "auth-user-session-ttl-minutes",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "auth-user-session-ttl-minutes",
+            "labels": {},
+            "name": "auth-user-session-ttl-minutes",
+            "value": "960"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "hide-local-cluster",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "hide-local-cluster",
+            "labels": {},
+            "name": "hide-local-cluster",
+            "value": "false"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "ingress-ip-domain",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "ingress-ip-domain",
+            "labels": {},
+            "name": "ingress-ip-domain",
+            "value": "sslip.io"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "kubeconfig-default-token-ttl-minutes",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "kubeconfig-default-token-ttl-minutes",
+            "labels": {},
+            "name": "kubeconfig-default-token-ttl-minutes",
+            "value": "43200"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "kubeconfig-generate-token",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "kubeconfig-generate-token",
+            "labels": {},
+            "name": "kubeconfig-generate-token",
+            "value": "true"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "password-min-length",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "password-min-length",
+            "labels": {},
+            "name": "password-min-length",
+            "value": "12"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "server-url",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "server-url",
+            "labels": {},
+            "name": "server-url",
+            "value": "https://rancher.homelab.local"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "telemetry-opt",
+          "schema_version": 0,
+          "attributes": {
+            "annotations": {},
+            "id": "telemetry-opt",
+            "labels": {
+              "cattle.io/creator": "norman"
+            },
+            "name": "telemetry-opt",
+            "value": "out"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
