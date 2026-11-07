@@ -2,9 +2,11 @@
 .terraform/
 .terraform.lock.hcl
 *.tfstate
-*.tfstate.backup
+*.tfstate.*
 *.tfplan
 
 # Secrets
 terraform.tfvars
 *.auto.tfvars
+.env
+.env.*
