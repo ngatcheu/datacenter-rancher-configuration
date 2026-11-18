@@ -1,37 +1,31 @@
 variable "ldap_service_account_username_dn" {
-  description = "DN du compte de service LDAP (rootDN OpenLDAP)"
+  description = "Nom d'utilisateur du compte de service LDAP"
   type        = string
   sensitive   = true
 }
 
 variable "ldap_service_account_username" {
-  description = "Identifiant de test pour la vérification LDAP"
+  description = "Nom d'utilisateur du compte de service LDAP"
   type        = string
   sensitive   = true
 }
 
 variable "ldap_service_account_password" {
-  description = "Mot de passe du compte de service LDAP (rootDN)"
-  type        = string
-  sensitive   = true
-}
-
-variable "ldap_test_password" {
-  description = "Mot de passe de l'utilisateur de test LDAP (fabrice.ngatcheu)"
-  type        = string
-  sensitive   = true
-}
-
-# ─── Rancher API (après bootstrap) ───────────────────────────────────────────
-variable "rancher_token_key" {
-  description = "Token admin Rancher (issu de make bootstrap-show-token)"
+  description = "Mot de passe du compte de service LDAP"
   type        = string
   sensitive   = true
 }
 
 variable "rancher_ca_cert" {
-  description = "Contenu PEM du CA certificate de Rancher. Obtenu via : make config-show-ca"
+  description = "CA certificate PEM pour Rancher (cacerts setting)"
+  type        = string
+  default     = ""
+}
+
+
+
+variable "ldap_test_password" {
+  description = "Mot de passe de ldap.test_username, utilisé par Rancher pour valider la connexion LDAP (TF_VAR_ldap_test_password, depuis le vault de datacenter-openldap-playbooks)."
   type        = string
   sensitive   = true
-  default     = ""
 }
